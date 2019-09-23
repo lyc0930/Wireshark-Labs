@@ -89,7 +89,7 @@
 4. 刷新网页
 
 5. 捕获如下分组
-     1. HTTP请求报文
+	1. HTTP请求报文
   	```http
   	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
   	Host: gaia.cs.umass.edu\r\n
@@ -102,7 +102,7 @@
   	\r\n
   	```
 
-     2. HTTP响应报文
+	2. HTTP响应报文
   	```http
   	HTTP/1.1 200 OK\r\n
   	Date: Mon, 23 Sep 2019 04:03:15 GMT\r\n
@@ -131,7 +131,7 @@
   	```
   	
   	
-     3. HTTP请求报文
+	3. HTTP请求报文
   	```http
   	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
   	Host: gaia.cs.umass.edu\r\n
@@ -147,7 +147,7 @@
   	\r\n
   	```
 
-     4. HTTP响应报文
+	4. HTTP响应报文
   	```http
   	HTTP/1.1 304 Not Modified\r\n
   	Date: Mon, 23 Sep 2019 04:03:19 GMT\r\n
@@ -162,13 +162,13 @@
 
 6. 阅读分组具体内容，对实验问题的回答如下
 
-  8. 在第一次请求报文中，相关内容没有出现
+	8. 在第一次请求报文中，相关内容没有出现
 
-  9. 在第一次的响应报文中，服务器显式地返回了html文件内容
+	9. 在第一次的响应报文中，服务器显式地返回了html文件内容
 
-  10. 内容`If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n`出现于第二次请求报文  
+	10. 内容`If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n`出现于第二次请求报文  
 
-  11. 第二次响应报文的状态码为`304`，响应短语为`Not Modified`，意为在上次请求响应之后，内容没有修改，因此这次响应报文不再显式地返回文件内
+	11. 第二次响应报文的状态码为`304`，响应短语为`Not Modified`，意为在上次请求响应之后，内容没有修改，因此这次响应报文不再显式地返回文件内
 
   
 
@@ -184,7 +184,7 @@
 	
 4. 捕获如下分组
 
-     1. HTTP请求报文
+	1. HTTP请求报文
         ```http
         GET /wireshark-labs/HTTP-wireshark-file3.html HTTP/1.1\r\n
         Host: gaia.cs.umass.edu\r\n
@@ -199,7 +199,7 @@
      
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_1.png)
      
-     2. HTTP响应报文
+	2. HTTP响应报文
         ```http
         HTTP/1.1 200 OK\r\n
         Date: Mon, 23 Sep 2019 06:51:50 GMT\r\n
@@ -313,11 +313,9 @@
         <p>The powers not delegated to the United States by the Constitution, nor prohibited \n
           by it to the states, are reserved to the states respectively, or to the people.</p>\n
         </body></html>
-       ```
-       
+       ```  
        ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_2.png)
 
-  	
 
 5. 阅读分组具体内容，对实验问题的回答如下
 
@@ -344,7 +342,7 @@
 
 4. 捕获如下分组
 
-     1. HTTP请求报文
+	1. HTTP请求报文
 	```http
 	GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
@@ -357,7 +355,7 @@
 	\r\n
 	```
 
-     2. HTTP响应报文
+	2. HTTP响应报文
 	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 13:45:01 GMT\r\n
@@ -391,7 +389,7 @@
 	</html>\n
 	```
 
-     3. HTTP请求报文
+	3. HTTP请求报文
      
 	```http
 	GET /pearson.png HTTP/1.1\r\n
@@ -405,7 +403,7 @@
 	\r\n
 	```
 
-     4. HTTP请求报文
+	4. HTTP请求报文
      
 	```http
 	GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
