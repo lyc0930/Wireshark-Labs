@@ -29,7 +29,7 @@
 	
 3. 捕获如下分组  
 
-     1. HTTP GET 报文  
+	1. HTTP GET 报文
         ```http
         GET /wireshark-labs/HTTP-wireshark-file1.html HTTP/1.1\r\n
         Host: gaia.cs.umass.edu\r\n
@@ -43,7 +43,7 @@
         ```
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_1.png)
         
-     2. HTTP 响应报文  
+	2. HTTP 响应报文
      	```http
      	HTTP/1.1 200 OK\r\n
      	Date: Mon, 23 Sep 2019 01:58:39 GMT\r\n
@@ -82,13 +82,14 @@
 
 2. 设置Wireshark捕获  
 
-3. 浏览给定网址
+3. 浏览给定网址  
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\2_0.png)
 	
 4. 刷新网页
 
 5. 捕获如下分组
+
 	1. HTTP请求报文
   	```http
   	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
@@ -178,7 +179,7 @@
 
 2. 设置Wireshark捕获  
 
-3. 浏览给定网址
+3. 浏览给定网址  
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_0.png)
 	
@@ -208,7 +209,6 @@
         ETag: "1194-593321dccac20"\r\n
         Accept-Ranges: bytes\r\n
         Content-Length: 4500\r\n
-        [Content length: 4500]
         Keep-Alive: timeout=5, max=100\r\n
         Connection: Keep-Alive\r\n
         Content-Type: text/html; charset=UTF-8\r\n
@@ -335,7 +335,7 @@
 
 2. 设置Wireshark捕获  
 
-3. 浏览给定网址
+3. 浏览给定网址  
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html
 
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\4_0.png)
@@ -390,7 +390,6 @@
 	```
 
 	3. HTTP请求报文
-     
 	```http
 	GET /pearson.png HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
@@ -404,7 +403,6 @@
 	```
 
 	4. HTTP请求报文
-     
 	```http
 	GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
 	Host: manic.cs.umass.edu\r\n
@@ -418,7 +416,6 @@
 	```
 
      5. HTTP响应报文
-     
 	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 13:45:02 GMT\r\n
@@ -444,7 +441,7 @@
 
 2. 设置Wireshark捕获  
 
-3. 浏览给定网址
+3. 浏览给定网址  
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file5.html
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\5_0_0.png)
 
@@ -453,8 +450,8 @@
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\5_0_1.png)
 
 5. 捕获如下分组
-	1. HTTP请求报文
 
+	1. HTTP请求报文
 	```http
 	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
@@ -467,10 +464,7 @@
 	\r\n
 	```
 
-		
-
 	2. HTTP响应报文
-
 	```http
 	HTTP/1.1 401 Unauthorized\r\n
 	Date: Mon, 23 Sep 2019 15:32:01 GMT\r\n
@@ -498,7 +492,6 @@
 	```
 
 	3. HTTP请求报文
-
 	```http
 	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
@@ -514,7 +507,6 @@
 	```
 
 	4. HTTP响应报文
-
 	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 15:32:12 GMT\r\n
