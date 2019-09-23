@@ -109,11 +109,10 @@
   	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
   	Last-Modified: Sun, 22 Sep 2019 05:59:01 GMT\r\n
   	ETag: "173-5931dfff60ca9"\r\n
-  Accept-Ranges: bytes\r\n
+  	Accept-Ranges: bytes\r\n
   	Content-Length: 371\r\n
-  [Content length: 371]
   	Keep-Alive: timeout=5, max=100\r\n
-  Connection: Keep-Alive\r\n
+  	Connection: Keep-Alive\r\n
   	Content-Type: text/html; charset=UTF-8\r\n
   	\r\n
   	```
@@ -141,11 +140,11 @@
   	Upgrade-Insecure-Requests: 1\r\n
   	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
   	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-  Accept-Encoding: gzip, deflate\r\n
+	Accept-Encoding: gzip, deflate\r\n
   	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-  If-None-Match: "173-5931dfff60ca9"\r\n
+  	If-None-Match: "173-5931dfff60ca9"\r\n
   	If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n
-  \r\n
+  	\r\n
   	```
 
      4. HTTP响应报文
@@ -323,8 +322,7 @@
 5. 阅读分组具体内容，对实验问题的回答如下
 
 	12. 浏览器发送了1个请求报文，在响应报文的第203、204、205与206分组中包含了相关内容 
-
-	​	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_3.png)
+		![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_3.png)
 
 	13. 在响应报文的第203分组中包含了状态码和与请求报文相关的状态短语
 
@@ -395,46 +393,46 @@
 
      3. HTTP请求报文
      
-		```http
-		GET /pearson.png HTTP/1.1\r\n
-		Host: gaia.cs.umass.edu\r\n
-		Connection: keep-alive\r\n
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-		Accept: image/webp,image/apng,image/*,*/*;q=0.8\r\n
-		Referer: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html\r\n
-		Accept-Encoding: gzip, deflate\r\n
-		Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-		\r\n
-		```
+	```http
+	GET /pearson.png HTTP/1.1\r\n
+	Host: gaia.cs.umass.edu\r\n
+	Connection: keep-alive\r\n
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+	Accept: image/webp,image/apng,image/*,*/*;q=0.8\r\n
+	Referer: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html\r\n
+	Accept-Encoding: gzip, deflate\r\n
+	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+	\r\n
+	```
 
      4. HTTP请求报文
      
-		```http
-		GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
-		Host: manic.cs.umass.edu\r\n
-		Connection: keep-alive\r\n
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-		Accept: image/webp,image/apng,image/*,*/*;q=0.8\r\n
-		Referer: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html\r\n
-		Accept-Encoding: gzip, deflate\r\n
-		Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-		\r\n
-		```
+	```http
+	GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
+	Host: manic.cs.umass.edu\r\n
+	Connection: keep-alive\r\n
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+	Accept: image/webp,image/apng,image/*,*/*;q=0.8\r\n
+	Referer: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html\r\n
+	Accept-Encoding: gzip, deflate\r\n
+	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+	\r\n
+	```
 
      5. HTTP响应报文
      
-		```http
-		HTTP/1.1 200 OK\r\n
-		Date: Mon, 23 Sep 2019 13:45:02 GMT\r\n
-		Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-		Last-Modified: Sat, 06 Aug 2016 10:08:14 GMT\r\n
-		ETag: "cc3-539645c7f1ee7"\r\n
-		Accept-Ranges: bytes\r\n
-		Content-Length: 3267\r\n
-		Keep-Alive: timeout=5, max=99\r\n
-		Connection: Keep-Alive\r\n
-		Content-Type: image/png\r\n
-		\r\n
+	```http
+	HTTP/1.1 200 OK\r\n
+	Date: Mon, 23 Sep 2019 13:45:02 GMT\r\n
+	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+	Last-Modified: Sat, 06 Aug 2016 10:08:14 GMT\r\n
+	ETag: "cc3-539645c7f1ee7"\r\n
+	Accept-Ranges: bytes\r\n
+	Content-Length: 3267\r\n
+	Keep-Alive: timeout=5, max=99\r\n
+	Connection: Keep-Alive\r\n
+	Content-Type: image/png\r\n
+	\r\n
 		```
 
 5. 阅读分组具体内容，对实验问题的回答如下
@@ -459,93 +457,87 @@
 5. 捕获如下分组
 	1. HTTP请求报文
 
-		```http
-		GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
-		Host: gaia.cs.umass.edu\r\n
-		Connection: keep-alive\r\n
-		Upgrade-Insecure-Requests: 1\r\n
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-		Accept-Encoding: gzip, deflate\r\n
-		Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-		\r\n
-		```
+	```http
+	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
+	Host: gaia.cs.umass.edu\r\n
+	Connection: keep-alive\r\n
+	Upgrade-Insecure-Requests: 1\r\n
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+	Accept-Encoding: gzip, deflate\r\n
+	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+	\r\n
+	```
 
 		
 
 	2. HTTP响应报文
 
-		```http
-		HTTP/1.1 401 Unauthorized\r\n
-		Date: Mon, 23 Sep 2019 15:32:01 GMT\r\n
-		Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-		WWW-Authenticate: Basic realm="wireshark-students only"\r\n
-		Content-Length: 381\r\n
-		Keep-Alive: timeout=5, max=100\r\n
-		Connection: Keep-Alive\r\n
-		Content-Type: text/html; charset=iso-8859-1\r\n
-		\r\n
-		```
-
-		```html
-		<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n
-		<html><head>\n
-		<title>401 Unauthorized</title>\n
-		</head><body>\n
-		<h1>Unauthorized</h1>\n
-		<p>This server could not verify that you\n
-		are authorized to access the document\n
-		requested.  Either you supplied the wrong\n
-		credentials (e.g., bad password), or your\n
-		browser doesn't understand how to supply\n
-		the credentials required.</p>\n
-		</body></html>\n
-		```
-
-		
+	```http
+	HTTP/1.1 401 Unauthorized\r\n
+	Date: Mon, 23 Sep 2019 15:32:01 GMT\r\n
+	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+	WWW-Authenticate: Basic realm="wireshark-students only"\r\n
+	Content-Length: 381\r\n
+	Keep-Alive: timeout=5, max=100\r\n
+	Connection: Keep-Alive\r\n
+	Content-Type: text/html; charset=iso-8859-1\r\n
+	\r\n
+	```
+	```html
+	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n
+	<html><head>\n
+	<title>401 Unauthorized</title>\n
+	</head><body>\n
+	<h1>Unauthorized</h1>\n
+	<p>This server could not verify that you\n
+	are authorized to access the document\n
+	requested.  Either you supplied the wrong\n
+	credentials (e.g., bad password), or your\n
+	browser doesn't understand how to supply\n
+	the credentials required.</p>\n
+	</body></html>\n
+	```
 
 	3. HTTP请求报文
 
-		```http
-		GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
-		Host: gaia.cs.umass.edu\r\n
-		Connection: keep-alive\r\n
-		Authorization: Basic d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=\r\n
-		Credentials: wireshark-students:network
-		Upgrade-Insecure-Requests: 1\r\n
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-		Accept-Encoding: gzip, deflate\r\n
-		Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-		\r\n
-		```
-
-		
+	```http
+	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
+	Host: gaia.cs.umass.edu\r\n
+	Connection: keep-alive\r\n
+	Authorization: Basic d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=\r\n
+	Credentials: wireshark-students:network
+	Upgrade-Insecure-Requests: 1\r\n
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+	Accept-Encoding: gzip, deflate\r\n
+	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+	\r\n
+	```
 
 	4. HTTP响应报文
 
-		```http
-		HTTP/1.1 200 OK\r\n
-		Date: Mon, 23 Sep 2019 15:32:12 GMT\r\n
-		Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-		Last-Modified: Mon, 23 Sep 2019 05:59:01 GMT\r\n
-		ETag: "84-593321dcd1d69"\r\n
-		Accept-Ranges: bytes\r\n
-		Content-Length: 132\r\n
-		Keep-Alive: timeout=5, max=100\r\n
-		Connection: Keep-Alive\r\n
-		Content-Type: text/html; charset=UTF-8\r\n
-		\r\n
-		```
-
-		```html
-		\n
-		<html>\n
-		\n
-		This page is password protected!  If you're seeing this, you've downloaded the page correctly <br>\n
-		Congratulations!\n
-		</html>
-		```
+	```http
+	HTTP/1.1 200 OK\r\n
+	Date: Mon, 23 Sep 2019 15:32:12 GMT\r\n
+	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+	Last-Modified: Mon, 23 Sep 2019 05:59:01 GMT\r\n
+	ETag: "84-593321dcd1d69"\r\n
+	Accept-Ranges: bytes\r\n
+	Content-Length: 132\r\n
+	Keep-Alive: timeout=5, max=100\r\n
+	Connection: Keep-Alive\r\n
+	Content-Type: text/html; charset=UTF-8\r\n
+	\r\n
+	```
+	```html
+	\n
+	<html>\n
+	\n
+	This page is password protected!  If you're seeing this, you've downloaded the page correctly <br>\n
+	Congratulations!\n
+	</html>
+	```
 
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\5_1.png)
 
