@@ -31,15 +31,15 @@
 
 	1. HTTP GET 报文
         ```http
-        GET /wireshark-labs/HTTP-wireshark-file1.html HTTP/1.1\r\n
-        Host: gaia.cs.umass.edu\r\n
-        Connection: keep-alive\r\n
-        Upgrade-Insecure-Requests: 1\r\n
-        User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-        Accept-Encoding: gzip, deflate\r\n
-        Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-        \r\n
+     	GET /wireshark-labs/HTTP-wireshark-file1.html HTTP/1.1\r\n
+     	Host: gaia.cs.umass.edu\r\n
+     	Connection: keep-alive\r\n
+     	Upgrade-Insecure-Requests: 1\r\n
+     	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+     	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+     	Accept-Encoding: gzip, deflate\r\n
+     	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+     	\r\n
         ```
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_1.png)
         
@@ -91,65 +91,64 @@
 5. 捕获如下分组
 
 	1. HTTP请求报文
-  	```http
-  	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
-  	Host: gaia.cs.umass.edu\r\n
-  	Connection: keep-alive\r\n
-  	Upgrade-Insecure-Requests: 1\r\n
-  	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-  	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-  	Accept-Encoding: gzip, deflate\r\n
-  	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-  	\r\n
-  	```
+     	```http
+     	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
+     	Host: gaia.cs.umass.edu\r\n
+     	Connection: keep-alive\r\n
+     	Upgrade-Insecure-Requests: 1\r\n
+     	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+     	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+     	Accept-Encoding: gzip, deflate\r\n
+     	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+     	\r\n
+     	```
 
 	2. HTTP响应报文
-  	```http
-  	HTTP/1.1 200 OK\r\n
-  	Date: Mon, 23 Sep 2019 04:03:15 GMT\r\n
-  	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-  	Last-Modified: Sun, 22 Sep 2019 05:59:01 GMT\r\n
-  	ETag: "173-5931dfff60ca9"\r\n
-  	Accept-Ranges: bytes\r\n
-  	Content-Length: 371\r\n
-  	Keep-Alive: timeout=5, max=100\r\n
-  	Connection: Keep-Alive\r\n
-  	Content-Type: text/html; charset=UTF-8\r\n
-  	\r\n
-  	```
+     	```http
+     	HTTP/1.1 200 OK\r\n
+     	Date: Mon, 23 Sep 2019 04:03:15 GMT\r\n
+     	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+     	Last-Modified: Sun, 22 Sep 2019 05:59:01 GMT\r\n
+     	ETag: "173-5931dfff60ca9"\r\n
+     	Accept-Ranges: bytes\r\n
+     	Content-Length: 371\r\n
+     	Keep-Alive: timeout=5, max=100\r\n
+     	Connection: Keep-Alive\r\n
+     	Content-Type: text/html; charset=UTF-8\r\n
+     	\r\n
+     	```
 	
-  	```html
-  	\n
-  	<html>\n
-  	\n
-  	Congratulations again!  Now you've downloaded the file lab2-2.html. <br>\n
-  	This file's last modification date will not change.  <p>\n
-  	Thus  if you download this multiple times on your browser, a complete copy <br>\n
-  	will only be sent once by the server due to the inclusion of the IN-MODIFIED-SINCE<br>\n
-  	field in your browser's HTTP GET request to the server.\n
-  	\n
-  	</html>\n
-  	```
-  	
-  	
+     	```html
+     	\n
+     	<html>\n
+     	\n
+     	Congratulations again!  Now you've downloaded the file lab2-2.html. <br>\n
+     	This file's last modification date will not change.  <p>\n
+     	Thus  if you download this multiple times on your browser, a complete copy <br>\n
+     	will only be sent once by the server due to the inclusion of the IN-MODIFIED-SINCE<br>\n
+     	field in your browser's HTTP GET request to the server.\n
+     	\n
+     	</html>\n
+     	```
+	
 	3. HTTP请求报文
-  	```http
-  	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
-  	Host: gaia.cs.umass.edu\r\n
-  	Connection: keep-alive\r\n
-  	Cache-Control: max-age=0\r\n
-  	Upgrade-Insecure-Requests: 1\r\n
-  	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-  	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-	Accept-Encoding: gzip, deflate\r\n
-  	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-  	If-None-Match: "173-5931dfff60ca9"\r\n
-  	If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n
-  	\r\n
-  	```
+     	```http
+     	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
+     	Host: gaia.cs.umass.edu\r\n
+     	Connection: keep-alive\r\n
+     	Cache-Control: max-age=0\r\n
+     	Upgrade-Insecure-Requests: 1\r\n
+     	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+     	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+     	Accept-Encoding: gzip, deflate\r\n
+     	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+     	If-None-Match: "173-5931dfff60ca9"\r\n
+     	If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n
+     	\r\n
+     	```
 
 	4. HTTP响应报文
-  	```http
+     	```http
   	HTTP/1.1 304 Not Modified\r\n
   	Date: Mon, 23 Sep 2019 04:03:19 GMT\r\n
   	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -157,7 +156,7 @@
   	Keep-Alive: timeout=5, max=98\r\n
   	ETag: "173-5931dfff60ca9"\r\n
   	\r\n
-  	```
+     	```
 
   ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\2.png)
 
@@ -186,7 +185,7 @@
 4. 捕获如下分组
 
 	1. HTTP请求报文
-        ```http
+     	```http
         GET /wireshark-labs/HTTP-wireshark-file3.html HTTP/1.1\r\n
         Host: gaia.cs.umass.edu\r\n
         Connection: keep-alive\r\n
@@ -196,12 +195,12 @@
         Accept-Encoding: gzip, deflate\r\n
         Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
         \r\n
-        ```
+     	```
      
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_1.png)
      
 	2. HTTP响应报文
-        ```http
+     	```http
         HTTP/1.1 200 OK\r\n
         Date: Mon, 23 Sep 2019 06:51:50 GMT\r\n
         Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -213,8 +212,8 @@
         Connection: Keep-Alive\r\n
         Content-Type: text/html; charset=UTF-8\r\n
         \r\n
-        ```
-        ```html
+     	```
+     	```html
         <html><head> \n
         <title>Historical Documents:THE BILL OF RIGHTS</title></head>\n
         \n
@@ -313,7 +312,7 @@
         <p>The powers not delegated to the United States by the Constitution, nor prohibited \n
           by it to the states, are reserved to the states respectively, or to the people.</p>\n
         </body></html>
-       ```  
+     	```  
        ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_2.png)
 
 
@@ -343,7 +342,7 @@
 4. 捕获如下分组
 
 	1. HTTP请求报文
-	```http
+     	```http
 	GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
 	Connection: keep-alive\r\n
@@ -353,10 +352,10 @@
 	Accept-Encoding: gzip, deflate\r\n
 	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
 	\r\n
-	```
+     	```
 
 	2. HTTP响应报文
-	```http
+     	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 13:45:01 GMT\r\n
 	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -368,8 +367,8 @@
 	Connection: Keep-Alive\r\n
 	Content-Type: text/html; charset=UTF-8\r\n
 	\r\n
-	```
-	```html
+     	```
+     	```html
 	<html>\n
 	<head>\n
 	<title>Lab2-4 file: Embedded URLs</title>\n
@@ -387,10 +386,10 @@
 	<p align="left"><img src="http://manic.cs.umass.edu/~kurose/cover_5th_ed.jpg" width="168" height="220"></p>\n
 	</body>\n
 	</html>\n
-	```
+     	```
 
 	3. HTTP请求报文
-	```http
+     	```http
 	GET /pearson.png HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
 	Connection: keep-alive\r\n
@@ -400,10 +399,10 @@
 	Accept-Encoding: gzip, deflate\r\n
 	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
 	\r\n
-	```
+     	```
 
 	4. HTTP请求报文
-	```http
+     	```http
 	GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
 	Host: manic.cs.umass.edu\r\n
 	Connection: keep-alive\r\n
@@ -413,10 +412,10 @@
 	Accept-Encoding: gzip, deflate\r\n
 	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
 	\r\n
-	```
+     	```
 
      5. HTTP响应报文
-	```http
+     	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 13:45:02 GMT\r\n
 	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -428,7 +427,7 @@
 	Connection: Keep-Alive\r\n
 	Content-Type: image/png\r\n
 	\r\n
-		```
+     	```
 
 5. 阅读分组具体内容，对实验问题的回答如下
 
@@ -452,7 +451,7 @@
 5. 捕获如下分组
 
 	1. HTTP请求报文
-	```http
+     	```http
 	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
 	Connection: keep-alive\r\n
@@ -462,10 +461,10 @@
 	Accept-Encoding: gzip, deflate\r\n
 	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
 	\r\n
-	```
+     	```
 
 	2. HTTP响应报文
-	```http
+     	```http
 	HTTP/1.1 401 Unauthorized\r\n
 	Date: Mon, 23 Sep 2019 15:32:01 GMT\r\n
 	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -475,8 +474,8 @@
 	Connection: Keep-Alive\r\n
 	Content-Type: text/html; charset=iso-8859-1\r\n
 	\r\n
-	```
-	```html
+     	```
+     	```html
 	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n
 	<html><head>\n
 	<title>401 Unauthorized</title>\n
@@ -489,10 +488,10 @@
 	browser doesn't understand how to supply\n
 	the credentials required.</p>\n
 	</body></html>\n
-	```
+     	```
 
 	3. HTTP请求报文
-	```http
+     	```http
 	GET /wireshark-labs/protected_pages/HTTP-wireshark-file5.html HTTP/1.1\r\n
 	Host: gaia.cs.umass.edu\r\n
 	Connection: keep-alive\r\n
@@ -504,10 +503,10 @@
 	Accept-Encoding: gzip, deflate\r\n
 	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
 	\r\n
-	```
+     	```
 
 	4. HTTP响应报文
-	```http
+     	```http
 	HTTP/1.1 200 OK\r\n
 	Date: Mon, 23 Sep 2019 15:32:12 GMT\r\n
 	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
@@ -519,15 +518,15 @@
 	Connection: Keep-Alive\r\n
 	Content-Type: text/html; charset=UTF-8\r\n
 	\r\n
-	```
-	```html
+     	```
+     	```html
 	\n
 	<html>\n
 	\n
 	This page is password protected!  If you're seeing this, you've downloaded the page correctly <br>\n
 	Congratulations!\n
 	</html>
-	```
+     	```
 
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\5_1.png)
 
