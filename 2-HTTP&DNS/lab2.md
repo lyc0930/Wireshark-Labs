@@ -21,17 +21,15 @@
 
 ### 基础请求响应(GET/response)报文交互
 
-1. 在Wireshark中对捕获的分组应用HTTP协议过滤  
+1. 在Wireshark中对捕获的分组应用HTTP协议过滤   
 
-2. 浏览给定网址
+2. 浏览给定网址  
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html
-	
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_0.png)
 	
-3. 捕获如下分组
+3. 捕获如下分组  
 
      1. HTTP GET 报文  
-        
         ```http
         GET /wireshark-labs/HTTP-wireshark-file1.html HTTP/1.1\r\n
         Host: gaia.cs.umass.edu\r\n
@@ -43,28 +41,22 @@
         Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
         \r\n
         ```
-        
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_1.png)
         
-        
-        
-       2. HTTP 响应报文  
-
+     2. HTTP 响应报文  
      	```http
-     HTTP/1.1 200 OK\r\n
+     	HTTP/1.1 200 OK\r\n
      	Date: Mon, 23 Sep 2019 01:58:39 GMT\r\n
      	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
      	Last-Modified: Sun, 22 Sep 2019 05:59:01 GMT\r\n
      	ETag: "80-5931dfff61479"\r\n
      	Accept-Ranges: bytes\r\n
      	Content-Length: 128\r\n
-     	[Content length: 128]
      	Keep-Alive: timeout=5, max=100\r\n
      	Connection: Keep-Alive\r\n
      	Content-Type: text/html; charset=UTF-8\r\n
      	\r\n
      	```
-     	
      	```html
      	<html>\n
      	Congratulations.  You've downloaded the file \n
@@ -72,9 +64,7 @@
      	</html>\n
      	```
      	
-     	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_2.png)
-
-
+     	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\1_2.png)  
 
 4. 阅读分组具体内容，对实验问题的回答如下
 	1. 本地浏览器运行的HTTP版本是1.1，服务器运行HTTP 1.1  
@@ -83,8 +73,7 @@
 	4. 从服务器返回的状态码为`200`  
 	5. 由内容`Last-Modified: Sun, 22 Sep 2019 05:59:01 GMT\r\n`可知，取回的HTML文件最后修改时间为格林威治时间2019年9月22日5:59:01  
 	6. 由内容`File Data: 128 bytes`可知，返回浏览器的内容大小为128字节  
-	7. 有部分没有出现在列表中的条目标题，比如`Connnection: `等
-
+	7. 有部分没有出现在列表中的条目标题，比如`Connnection: `等  
 
 
 ### 条件请求响应(GET/response)报文交互  
@@ -95,15 +84,12 @@
 
 3. 浏览给定网址
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html
-	
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\2_0.png)
 	
 4. 刷新网页
 
 5. 捕获如下分组
-
-  1. HTTP请求报文
-
+     1. HTTP请求报文
   	```http
   	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
   	Host: gaia.cs.umass.edu\r\n
@@ -115,11 +101,8 @@
   	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
   	\r\n
   	```
-  	
-  	
-  	
-  2. HTTP响应报文
 
+     2. HTTP响应报文
   	```http
   	HTTP/1.1 200 OK\r\n
   	Date: Mon, 23 Sep 2019 04:03:15 GMT\r\n
@@ -134,7 +117,7 @@
   	Content-Type: text/html; charset=UTF-8\r\n
   	\r\n
   	```
-  	
+	
   	```html
   	\n
   	<html>\n
@@ -149,9 +132,7 @@
   	```
   	
   	
-
-  3. HTTP请求报文
-
+     3. HTTP请求报文
   	```http
   	GET /wireshark-labs/HTTP-wireshark-file2.html HTTP/1.1\r\n
   	Host: gaia.cs.umass.edu\r\n
@@ -166,11 +147,8 @@
   	If-Modified-Since: Sun, 22 Sep 2019 05:59:01 GMT\r\n
   \r\n
   	```
-  	
-  	
-  	
-  4. HTTP响应报文
 
+     4. HTTP响应报文
   	```http
   	HTTP/1.1 304 Not Modified\r\n
   	Date: Mon, 23 Sep 2019 04:03:19 GMT\r\n
@@ -203,22 +181,21 @@
 
 3. 浏览给定网址
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html
-
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_0.png)
 	
 4. 捕获如下分组
 
      1. HTTP请求报文
         ```http
-     GET /wireshark-labs/HTTP-wireshark-file3.html HTTP/1.1\r\n
-     Host: gaia.cs.umass.edu\r\n
-     Connection: keep-alive\r\n
-     Upgrade-Insecure-Requests: 1\r\n
-     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-     Accept-Encoding: gzip, deflate\r\n
-     Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-     \r\n
+        GET /wireshark-labs/HTTP-wireshark-file3.html HTTP/1.1\r\n
+        Host: gaia.cs.umass.edu\r\n
+        Connection: keep-alive\r\n
+        Upgrade-Insecure-Requests: 1\r\n
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+        Accept-Encoding: gzip, deflate\r\n
+        Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+        \r\n
         ```
      
         ![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\3_1.png)
@@ -369,62 +346,55 @@
 
 4. 捕获如下分组
 
-	1. HTTP请求报文
+     1. HTTP请求报文
+	```http
+	GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n
+	Host: gaia.cs.umass.edu\r\n
+	Connection: keep-alive\r\n
+	Upgrade-Insecure-Requests: 1\r\n
+	User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
+	Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
+	Accept-Encoding: gzip, deflate\r\n
+	Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
+	\r\n
+	```
 
-		```http
-		GET /wireshark-labs/HTTP-wireshark-file4.html HTTP/1.1\r\n
-		Host: gaia.cs.umass.edu\r\n
-		Connection: keep-alive\r\n
-		Upgrade-Insecure-Requests: 1\r\n
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36\r\n
-		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n
-		Accept-Encoding: gzip, deflate\r\n
-		Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7\r\n
-		\r\n
-		```
+     2. HTTP响应报文
+	```http
+	HTTP/1.1 200 OK\r\n
+	Date: Mon, 23 Sep 2019 13:45:01 GMT\r\n
+	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+	Last-Modified: Mon, 23 Sep 2019 05:59:01 GMT\r\n
+	ETag: "2ca-593321dccfa41"\r\n
+	Accept-Ranges: bytes\r\n
+	Content-Length: 714\r\n
+	Keep-Alive: timeout=5, max=100\r\n
+	Connection: Keep-Alive\r\n
+	Content-Type: text/html; charset=UTF-8\r\n
+	\r\n
+	```
+	```html
+	<html>\n
+	<head>\n
+	<title>Lab2-4 file: Embedded URLs</title>\n
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n
+	</head>\n
+	\n
+	<body bgcolor="#FFFFFF" text="#000000">\n
+	\n
+	<p>\n
+	<img src="http://gaia.cs.umass.edu/pearson.png" WIDTH="70" HEIGHT="41" > </p>\n
+	<p>This little HTML file is being served by gaia.cs.umass.edu. \n
+	It contains two embedded images. <br> The image above, also served from the \n
+	gaia.cs.umass.edu web site, is the logo of our publisher, Pearson. <br>\n
+	The image of our 5th edition book cover below is stored at, and served from, the www server caite.cs.umass.edu:</p>\n
+	<p align="left"><img src="http://manic.cs.umass.edu/~kurose/cover_5th_ed.jpg" width="168" height="220"></p>\n
+	</body>\n
+	</html>\n
+	```
 
-		
-
-	2. HTTP响应报文
-
-		```http
-		HTTP/1.1 200 OK\r\n
-		Date: Mon, 23 Sep 2019 13:45:01 GMT\r\n
-		Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
-		Last-Modified: Mon, 23 Sep 2019 05:59:01 GMT\r\n
-		ETag: "2ca-593321dccfa41"\r\n
-		Accept-Ranges: bytes\r\n
-		Content-Length: 714\r\n
-		Keep-Alive: timeout=5, max=100\r\n
-		Connection: Keep-Alive\r\n
-		Content-Type: text/html; charset=UTF-8\r\n
-		\r\n
-		```
-
-		```html
-		<html>\n
-		<head>\n
-		<title>Lab2-4 file: Embedded URLs</title>\n
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\n
-		</head>\n
-		\n
-		<body bgcolor="#FFFFFF" text="#000000">\n
-		\n
-		<p>\n
-		<img src="http://gaia.cs.umass.edu/pearson.png" WIDTH="70" HEIGHT="41" > </p>\n
-		<p>This little HTML file is being served by gaia.cs.umass.edu. \n
-		It contains two embedded images. <br> The image above, also served from the \n
-		gaia.cs.umass.edu web site, is the logo of our publisher, Pearson. <br>\n
-		The image of our 5th edition book cover below is stored at, and served from, the www server caite.cs.umass.edu:</p>\n
-		<p align="left"><img src="http://manic.cs.umass.edu/~kurose/cover_5th_ed.jpg" width="168" height="220"></p>\n
-		</body>\n
-		</html>\n
-		```
-
-		
-
-	3. HTTP请求报文
-
+     3. HTTP请求报文
+     
 		```http
 		GET /pearson.png HTTP/1.1\r\n
 		Host: gaia.cs.umass.edu\r\n
@@ -437,10 +407,8 @@
 		\r\n
 		```
 
-		
-
-	4. HTTP请求报文
-
+     4. HTTP请求报文
+     
 		```http
 		GET /~kurose/cover_5th_ed.jpg HTTP/1.1\r\n
 		Host: manic.cs.umass.edu\r\n
@@ -453,10 +421,8 @@
 		\r\n
 		```
 
-		
-
-	5. HTTP响应报文
-
+     5. HTTP响应报文
+     
 		```http
 		HTTP/1.1 200 OK\r\n
 		Date: Mon, 23 Sep 2019 13:45:02 GMT\r\n
@@ -469,10 +435,6 @@
 		Connection: Keep-Alive\r\n
 		Content-Type: image/png\r\n
 		\r\n
-		```
-
-		```
-		
 		```
 
 5. 阅读分组具体内容，对实验问题的回答如下
@@ -488,7 +450,6 @@
 
 3. 浏览给定网址
 	http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file5.html
-
 	![](D:\private\File\课程相关\计算机网络\Labs\2-HTTP&DNS\5_0_0.png)
 
 4. 键入用户名`wireshark-students `与密码`network`
