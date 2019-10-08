@@ -1,5 +1,5 @@
 # Computer Networking Labs
-[![](https://img.shields.io/badge/Homework-@lyc0930-green.svg?style=flat)](https://github.com/lyc0930) ![](https://img.shields.io/badge/USTC-2019Fall-critical.svg?style=flat)
+[![](https://img.shields.io/badge/Lab-@lyc0930-brightgreen.svg?style=flat)](https://github.com/lyc0930) ![](https://img.shields.io/badge/USTC-2019Fall-critical.svg?style=flat)
 
 Lab files of **Computer Networking** using Wireshark
 
